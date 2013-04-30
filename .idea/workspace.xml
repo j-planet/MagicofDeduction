@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0383bd58-90d1-41d0-aa39-098228e1714c" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\rails_projects\MagicofDeduction\app\assets\stylesheets\application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/static_pages.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/static_pages.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MagicofDeduction.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +15,7 @@
     <file path="/Ruby Console" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367348676523" ignored="false" />
     <file path="/application.html.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367349182302" ignored="false" />
     <file path="/routes.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367292327524" ignored="false" />
-    <file path="/custom.css.scss" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367350502018" ignored="false" />
+    <file path="/custom.css.scss" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367354848188" ignored="false" />
     <file path="/application.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367302423951" ignored="false" />
     <file path="/fonts.css" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367302551409" ignored="false" />
     <file path="/fonts.css.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367302993191" ignored="false" />
@@ -55,7 +48,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="71" selection-start="2481" selection-end="2481" vertical-scroll-proportion="-6.6538463">
+            <state line="31" column="0" selection-start="966" selection-end="966" vertical-scroll-proportion="-12.038462">
               <folding />
             </state>
           </provider>
@@ -64,7 +57,7 @@
       <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="16" selection-start="289" selection-end="289" vertical-scroll-proportion="0.23441109">
+            <state line="21" column="21" selection-start="314" selection-end="314" vertical-scroll-proportion="0.35219398">
               <folding />
             </state>
           </provider>
@@ -110,8 +103,8 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
       </list>
     </option>
@@ -985,13 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="71" selection-start="2481" selection-end="2481" vertical-scroll-proportion="-6.6538463">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="31" selection-start="1691" selection-end="1704" vertical-scroll-proportion="-25.461538">
@@ -999,9 +985,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="966" selection-end="966" vertical-scroll-proportion="-12.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="289" selection-end="289" vertical-scroll-proportion="0.23441109">
+        <state line="21" column="21" selection-start="314" selection-end="314" vertical-scroll-proportion="0.35219398">
           <folding />
         </state>
       </provider>
