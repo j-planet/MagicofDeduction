@@ -53,6 +53,9 @@ module MagicofDeduction
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
+    # add the path to fonts
+    config.assets.paths << "#{Rails.root}/app/assets/fonts/"
+
     # Enable the asset pipeline
     config.assets.enabled = true
 

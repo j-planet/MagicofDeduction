@@ -17,7 +17,8 @@ body {
   padding-bottom: 5px;
   padding-left: 10px;
 
-  font-size: 1.7em;
+  font-family: prettyCursive, Arial, sans-serif;
+  font-size: 2.2em;
   font-weight: bold;
   color: #fff;
   line-height: 1;
@@ -37,5 +38,62 @@ body {
   margin-right: -25px;
   padding-top: 7px;
 
-  font-size: 1.1em;
+  font-size: 1em;
+}
+
+
+// try fonts
+.logoText1 {
+  float: left;
+  margin-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+
+  font-family: dirtyClassic, Arial, sans-serif;
+  font-size: 2.7em;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.logoText2 {
+  float: left;
+  margin-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+
+  font-family: jellyka_saint-andrews_queen, Arial, sans-serif;
+  font-size: 2.7em;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.logoText3 {
+  float: left;
+  margin-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+
+  font-family: usDeclaration, Arial, sans-serif;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
