@@ -1,2 +1,29 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "") %>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+
+    <div class="hero-unit">Machine learning is awesome!! My projects are even more so!</div>
+
+    <div class="span12">
+
+      <div class="row-fluid">
+
+        <div class="span4">
+          <%= render 'projectStub', project: Project.find(1) %>
+        </div>
+
+        <div class="span4">
+          <%= render 'projectStub', project: Project.find(2) %>
+        </div>
+
+        <div class="span4">
+          <%= render 'projectStub', project: Project.find(3) %>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

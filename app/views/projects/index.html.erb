@@ -1,0 +1,27 @@
+<% provide(:title, "Projects") %>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+          <% @projects.each do |p| %>
+            <% if p==@projects.first %>
+                  <li class="active"><%= link_to p.title, p %></li>
+            <% else %>
+                  <li><%= link_to p.title, p %></li>
+            <% end %>
+
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="span9">
+
+    </div>
+  </div>
+
+
+</div>
+

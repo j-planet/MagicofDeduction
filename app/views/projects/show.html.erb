@@ -1,0 +1,8 @@
+<% provide(:title, @project.title) %>
+
+<h2><%= @project.title %></h2>
+<p>Uploaded on: <%= @project.updated_at.to_date %> </p>
+
+<%= image_tag @project.title_page_img %>
+
+<%= render 'project1' %>

@@ -1,4 +1,18 @@
 class ProjectsController < ApplicationController
-  def new
+  before_filter :find_project, only: :show
+
+  def index
+    @projects = Project.all
   end
+
+  def show
+
+  end
+
+  private
+
+    def find_project
+      @project = Project.find(params[:id])
+    end
+
 end

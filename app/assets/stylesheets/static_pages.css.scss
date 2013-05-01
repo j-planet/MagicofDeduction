@@ -1,3 +1,19 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.erb.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.span4 {
+  text-align: center;
+}
+
+div {
+  display: block;
+}
+
+.hero-unit {
+  background-color: #ff9f89;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  margin: 0px -20px 20px;
+  text-align: center;
+}

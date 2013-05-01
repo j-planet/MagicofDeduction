@@ -5,11 +5,27 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
+.navbar.navbar-inverse {
+  margin-bottom: 0px;
+}
+
+.navbar-inner {
+  border-radius: 0px;
 }
 
 // header
+.nav.pull-right {
+  margin-right: -22px;
+  padding-top: 17px;
+
+  font-size: 0.8em;
+}
+
+#navbarcontainer {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 .logoText {
   float: left;
   margin-right: 10px;
@@ -17,14 +33,17 @@ body {
   padding-bottom: 5px;
   padding-left: 10px;
 
-  font-family: prettyCursive, Arial, sans-serif;
-  font-size: 2.2em;
+  font-family: usDeclaration, Arial, sans-serif;
+  font-size: 1.7em;
   font-weight: bolder;
+  font-style: normal;
+
   color: #fff;
   line-height: 1;
 
   &:hover {
     color: #fff;
+    font-style: italic;
     text-decoration: none;
   }
 }
@@ -34,31 +53,3 @@ body {
   margin-left: -10px;
 }
 
-.nav.pull-right {
-  margin-right: -25px;
-  padding-top: 17px;
-
-  font-size: 0.8em;
-}
-
-
-// try fonts
-
-.logoText3 {
-  float: left;
-  margin-right: 10px;
-  padding-top: 15px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-
-  font-family: usDeclaration, Arial, sans-serif;
-  font-size: 1.7em;
-  font-weight: bold;
-  color: #fff;
-  line-height: 1;
-
-  &:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-}
