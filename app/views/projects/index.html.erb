@@ -4,21 +4,24 @@
   <div class="row-fluid">
     <div class="span3">
       <div class="well sidebar-nav">
-        <ul class="nav nav-list">
-          <% @projects.each do |p| %>
-            <% if p==@projects.first %>
-                  <li class="active"><%= link_to p.title, p %></li>
-            <% else %>
-                  <li><%= link_to p.title, p %></li>
-            <% end %>
-
+        <ul class="nav nav-list projectSide">
+          <% @projects.count().times do |n| %>
+              <% p = @projects[n] %>
+              <li data-projectid="<%= n+1 %>"><%= link_to p.title, p %></li>
           <% end %>
         </ul>
       </div>
     </div>
 
-    <div class="span9">
+    <div class="span9 projectContent">
+      <% @projects.count().times do |n| %>
+          <% p = @projects[n] %>
 
+          <div id="project_<%= n+1 %>">
+            <%= render 'project', project: p %>
+
+          </div>
+      <% end %>
     </div>
   </div>
 

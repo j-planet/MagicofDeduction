@@ -1,0 +1,7 @@
+
+<h2><%= project.title %></h2>
+<p>Uploaded on: <%= project.updated_at.to_date %> </p>
+
+<%= image_tag project.title_page_img %>
+
+<%= escape_javascript(raw render partial: project.content_partial_view_name)%>
