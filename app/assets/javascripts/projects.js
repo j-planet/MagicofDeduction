@@ -15,6 +15,10 @@ jQuery(function($) {
 
     $(".projectSide li").click(selectTab);
 
-    $(".projectSide li:first").click();
+    ind = $(".projectSide").data('index');
+
+    $(".projectSide li:eq(" + ind + ")").click();
+
+//    $("#projectSide li:first").click();
 });
 

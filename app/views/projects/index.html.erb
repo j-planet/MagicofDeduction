@@ -4,7 +4,7 @@
   <div class="row-fluid">
     <div class="span3">
       <div class="well sidebar-nav">
-        <ul class="nav nav-list projectSide">
+        <ul class="nav nav-list projectSide" data-index=<%= @highlight_index %>>
           <% @projects.count().times do |n| %>
               <% p = @projects[n] %>
               <li data-projectid="<%= n+1 %>"><%= link_to p.title, p %></li>
