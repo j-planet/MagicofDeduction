@@ -9,7 +9,7 @@ jQuery(function($) {
         $(".projectSide .active").removeClass("active");
         $(this).addClass("active");
 
-        $(".projectContent div").hide();
+        $("[id^=project_]").hide();
         $("#project_" + $(this).data("projectid")).show();
     }
 

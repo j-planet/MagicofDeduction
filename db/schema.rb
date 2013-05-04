@@ -11,14 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429220306) do
+ActiveRecord::Schema.define(:version => 20130504023615) do
+
+  create_table "comments", :force => true do |t|
+    t.string   "email"
+    t.string   "content"
+    t.integer  "project_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
+  add_index "comments", ["project_id", "created_at"], :name => "index_comments_on_project_id_and_created_at"
 
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.string   "title_page_img"
     t.string   "content_partial_view_name"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
 end

@@ -2304,6 +2304,29 @@
       <column name="viewowner" sqlType="name" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
       <column name="definition" sqlType="text" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
     </table>
+    <table name="comments" schema="public" catalog="MagicofDeduction_development" type="TABLE">
+      <column name="id" sqlType="serial" length="10" precision="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29tbWVudHNfaWRfc2VxJzo6cmVnY2xhc3Mp"/>
+      <column name="email" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="project_id" sqlType="int4" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="timestamp" length="29" precision="6" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="timestamp" length="29" precision="6" nullable="false" jdbcType="93"/>
+      <column name="name" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="comments_pkey" columns="id"/>
+      <index name="index_comments_on_project_id_and_created_at" unique="false" columns="project_id,created_at"/>
+    </table>
+    <table name="comments_id_seq" schema="public" catalog="MagicofDeduction_development" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7"/>
+    </table>
     <table name="projects" schema="public" catalog="MagicofDeduction_development" type="TABLE">
       <column name="id" sqlType="serial" length="10" precision="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncHJvamVjdHNfaWRfc2VxJzo6cmVnY2xhc3Mp"/>
       <column name="title" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12"/>

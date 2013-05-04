@@ -1,3 +1,17 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.erb.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.well {
+  padding: 8px;
+}
+
+.commenter {
+  padding-top: 0px;
+  margin-top: 0px;
+
+  font-size: 10px;
+  color: #989898;
+}
+
+.commentContent {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}

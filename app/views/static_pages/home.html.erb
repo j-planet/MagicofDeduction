@@ -6,22 +6,17 @@
     <div class="hero-unit">Machine learning is awesome!! My projects are even more so!</div>
 
     <div class="span12">
+      <ul class="thumbnails">
 
-      <div class="row-fluid">
+        <% 3.times do |n| %>
+            <li class="span4">
+              <%= render 'projectStub', p: Project.find(n+1) %>
+            </li>
+        <% end %>
+      </ul>
 
-        <div class="span4">
-          <%= render 'projectStub', project: Project.find(1) %>
-        </div>
 
-        <div class="span4">
-          <%= render 'projectStub', project: Project.find(2) %>
-        </div>
 
-        <div class="span4">
-          <%= render 'projectStub', project: Project.find(3) %>
-        </div>
-
-      </div>
 
 
     </div>
