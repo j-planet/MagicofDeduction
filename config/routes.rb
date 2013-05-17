@@ -6,6 +6,8 @@ MagicofDeduction::Application.routes.draw do
 
   resources :projects, only: [:show, :index]
 
+  resources :comments, only: [:create]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -6,23 +6,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0383bd58-90d1-41d0-aa39-098228e1714c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/shared/_comment_form.html.erb" />
-      <change type="MOVED" beforePath="C:\rails_projects\MagicofDeduction\app\views\projects\_comment.html.erb" afterPath="$PROJECT_DIR$/app/views/projects/_showOneComment.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/projects/_project.html.erb" afterPath="$PROJECT_DIR$/app/views/projects/_project.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MagicofDeduction.iml" afterPath="$PROJECT_DIR$/.idea/MagicofDeduction.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MagicofDeduction.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367635491029" ignored="false" />
+    <file path="/Dummy.txt" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1368681100509" ignored="false" />
     <file path="/database.yml" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1366935443073" ignored="false" />
     <file path="/README.rdoc" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1366935564290" ignored="false" />
     <file path="/sample_data.rake" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367635592613" ignored="false" />
     <file path="/20130429220306_create_projects.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367277866688" ignored="false" />
-    <file path="/Ruby Console" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367363513320" ignored="false" />
+    <file path="/Ruby Console" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367905799641" ignored="false" />
     <file path="/application.html.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367368410581" ignored="false" />
-    <file path="/routes.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367368319965" ignored="false" />
+    <file path="/routes.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367903776605" ignored="false" />
     <file path="/custom.css.scss" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367635998090" ignored="false" />
     <file path="/application.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367302423951" ignored="false" />
     <file path="/fonts.css" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367302551409" ignored="false" />
@@ -38,10 +39,10 @@
     <file path="/_projectStub.html.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367364678980" ignored="false" />
     <file path="/index.html.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367533495638" ignored="false" />
     <file path="/_project1.html.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367467983374" ignored="false" />
-    <file path="/fragment.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367630503394" ignored="false" />
+    <file path="/fragment.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367904857407" ignored="false" />
     <file path="/projects.js.coffee" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367466351292" ignored="false" />
     <file path="/projects.js" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367634275439" ignored="false" />
-    <file path="/_project.html.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367636739200" ignored="false" />
+    <file path="/_project.html.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367905132477" ignored="false" />
     <file path="/20130503234412_create_comments.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367625282895" ignored="false" />
     <file path="/comment.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367635094943" ignored="false" />
     <file path="/project.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367631175774" ignored="false" />
@@ -49,6 +50,7 @@
     <file path="/projects.css.scss" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367635955103" ignored="false" />
     <file path="/20130504023615_add_name_to_comments.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367635001046" ignored="false" />
     <file path="/_comment_form.html.erb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367636515943" ignored="false" />
+    <file path="/comments_controller.rb" changelist="0383bd58-90d1-41d0-aa39-098228e1714c" time="1367905936825" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,40 +69,6 @@
     <groupTables value="false" />
     <sortChildren value="false" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="MagicofDeduction_development.public.projects" pinned="false" current="false" current-in-tab="false">
-              <entry file="dbDummy://dbtable:/3e6dcca0/5149bf7e-9db3-420b-a81a-5a578c3634ee/MagicofDeduction_development.public.projects">
-                <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-                  <state />
-                </provider>
-                <provider editor-type-id="text-editor">
-                  <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="MagicofDeduction_development.public.comments" pinned="false" current="false" current-in-tab="true">
-              <entry file="dbDummy://dbtable:/3e6dcca0/5149bf7e-9db3-420b-a81a-5a578c3634ee/MagicofDeduction_development.public.comments">
-                <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-                  <state />
-                </provider>
-                <provider editor-type-id="text-editor">
-                  <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="MagicofDeduction" />
@@ -110,7 +78,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="24" selection-start="633" selection-end="633" vertical-scroll-proportion="-13.076923">
+            <state line="16" column="83" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,16 +87,25 @@
       <file leaf-file-name="projects_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/projects_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="66" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+            <state line="2" column="6" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.erb">
+      <file leaf-file-name="_project.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/projects/_project.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="31" selection-start="578" selection-end="591" vertical-scroll-proportion="-9.807693">
+            <state line="5" column="94" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="77" selection-start="187" selection-end="187" vertical-scroll-proportion="0.30722892">
               <folding />
             </state>
           </provider>
@@ -143,28 +120,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="_comment_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="90" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1367808044743" expanded="true" signature="54:274" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="comment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_project.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/projects/_project.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="65" selection-start="293" selection-end="293" vertical-scroll-proportion="-7.1923075">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_comment_form.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,11 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/projects/_project3.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/projects/_project4.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/static_pages/_projectStub.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/static_pages.css.scss" />
         <option value="$PROJECT_DIR$/app/views/projects/_project5.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/projects.js" />
         <option value="$PROJECT_DIR$/db/migrate/20130504023615_add_name_to_comments.rb" />
@@ -202,8 +167,13 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" />
         <option value="$PROJECT_DIR$/app/controllers/projects_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/projects/_project.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_comment_form.html.erb" />
+        <option value="dbtable:/8778ce9b/5149bf7e-9db3-420b-a81a-5a578c3634ee/MagicofDeduction_development.public.projects" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="dbtable:/8778ce9b/5149bf7e-9db3-420b-a81a-5a578c3634ee/MagicofDeduction_development.public.comments" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/projects/_project.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
       </list>
     </option>
   </component>
@@ -215,10 +185,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="y" value="4" />
+    <option name="width" value="1273" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -707,7 +676,11 @@
       <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/script/rails" />
       <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
+      <RunnerSettings RunnerId="RubyCover" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyCover" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
@@ -962,25 +935,28 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyCover" />
       <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyCover" />
       <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: MagicofDeduction" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: MagicofDeduction" />
-      <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: MagicofDeduction" />
+      <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: MagicofDeduction" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Production: MagicofDeduction" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Development: MagicofDeduction" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: MagicofDeduction" />
         <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: MagicofDeduction" />
         <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: MagicofDeduction" />
         <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: MagicofDeduction" />
+        <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: MagicofDeduction" />
       </list>
     </recent_temporary>
   </component>
@@ -1011,23 +987,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="4" width="1273" height="1036" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3280899" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2051901" sideWeight="0.6022472" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2058304" sideWeight="0.6028921" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25226313" sideWeight="0.6719101" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39775282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23257698" sideWeight="0.6048835" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39511654" sideWeight="0.99911505" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2505618" sideWeight="0.42696628" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280899" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2502781" sideWeight="0.42696628" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3280899" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1092,84 +1069,60 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/projects.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130504023615_add_name_to_comments.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/_projectStub.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3e6dcca0/5149bf7e-9db3-420b-a81a-5a578c3634ee/MagicofDeduction_development.public.projects">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3e6dcca0/5149bf7e-9db3-420b-a81a-5a578c3634ee/MagicofDeduction_development.public.comments">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="578" selection-end="591" vertical-scroll-proportion="-9.807693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="28" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="28" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/projects/_showOneComment.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0624235">
+        <state line="3" column="6" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0624235" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/project.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="16" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8778ce9b/5149bf7e-9db3-420b-a81a-5a578c3634ee/MagicofDeduction_development.public.projects">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="210" selection-end="331" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="80" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="73" selection-start="142" selection-end="142" vertical-scroll-proportion="-2.6153846">
           <folding />
         </state>
       </provider>
@@ -1181,37 +1134,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/project.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+        <state line="16" column="83" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/projects_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="66" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="24" selection-start="633" selection-end="633" vertical-scroll-proportion="-13.076923">
+        <state line="2" column="6" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/projects/_project.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="65" selection-start="293" selection-end="293" vertical-scroll-proportion="-7.1923075">
+        <state line="5" column="94" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
+        <state line="12" column="90" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1367808044743" expanded="true" signature="54:274" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8778ce9b/5149bf7e-9db3-420b-a81a-5a578c3634ee/MagicofDeduction_development.public.comments">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="77" selection-start="187" selection-end="187" vertical-scroll-proportion="0.30722892">
           <folding />
         </state>
       </provider>
