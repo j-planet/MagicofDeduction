@@ -4,6 +4,9 @@ class CommentsController < ActionController::Base
     comment.save
 
     redirect_to Project.find(comment.project_id)
+  end
 
+  def index
+    @comments = Comment.paginate(page: params[:page], per_page: 15)
   end
 end

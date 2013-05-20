@@ -9,8 +9,26 @@
 
 <h3>Comments</h3>
 
-<%= render 'shared/comment_form', comment: project.comments.build %>
+<%= form_for(project.comments.build) do |f| %>
+    <div class="field">
 
-<% project.comments.all.each do |comment| %>
-    <%= render 'showOneComment', comment: comment %>
+      <%= f.text_area :content %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.hidden_field :project_id %>
+
+      <%= f.submit "Go" , class: "btn btn-small" %>
+    </div>
+<% end %>
+
+
+<% project.comments.each do |comment| %>
+    <div class="well">
+    <%= render comment %>
+    </div>
 <% end %>

@@ -1,6 +1,11 @@
 <%= form_for(comment) do |f| %>
     <div class="field">
+
+      <%= comment.project_id %>
+
       <%= f.text_area :content %>
+
+
 
       <%= f.label :name %>
       <%= f.text_field :name %>
