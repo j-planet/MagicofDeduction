@@ -11,6 +11,4 @@
 
 <%= render 'shared/comment_form', comment: project.comments.build %>
 
-<% project.comments.all.each do |comment| %>
-    <%= render 'showOneComment', comment: comment %>
-<% end %>
+<%= render 'comments/comments', comments: project.comments %>

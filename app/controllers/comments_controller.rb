@@ -4,6 +4,6 @@ class CommentsController < ActionController::Base
     comment.save
 
     redirect_to Project.find(comment.project_id)
-
   end
+
 end

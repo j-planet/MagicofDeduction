@@ -7,10 +7,16 @@ html {
 
 .navbar.navbar-inverse {
   margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-inner {
   border-radius: 0px;
+}
+
+body {
+  padding-top: 60px;
 }
 
 // header
@@ -33,7 +39,7 @@ html {
   padding-bottom: 5px;
   padding-left: 10px;
 
-  font-family: prettyCursive, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 1.7em;
   font-weight: bolder;
   font-style: normal;
@@ -42,8 +48,7 @@ html {
   line-height: 1;
 
   &:hover {
-    color: #fff;
-    font-style: italic;
+    color: yellow;
     text-decoration: none;
   }
 }

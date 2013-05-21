@@ -19,6 +19,5 @@ jQuery(function($) {
 
     $(".projectSide li:eq(" + ind + ")").click();
 
-//    $("#projectSide li:first").click();
 });
 

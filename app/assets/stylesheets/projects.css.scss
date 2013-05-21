@@ -1,7 +1,35 @@
 
 .well {
-  padding: 8px;
+  padding: 0px;
 }
+
+.container-fluid {
+  padding-left: 0px;
+  padding-top: 10px;
+}
+
+.sidebar-nav {
+  position: fixed;
+  width: 21.97%;
+}
+
+
+.active{
+  color: black;
+  background-color: white;
+}
+
+.projectSide li a {
+  color: white;
+  background-color: black;
+
+  &:hover {
+    color: black;
+    background-color: white;
+  }
+}
+
+// comments stuff
 
 .commenter {
   padding-top: 0px;
@@ -19,3 +47,5 @@
 
   //font-family: prettyCursive;
 }
+
+
