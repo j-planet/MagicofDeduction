@@ -1,51 +1,75 @@
-
-.well {
-  padding: 0px;
-}
-
 .container-fluid {
   padding-left: 0px;
   padding-top: 10px;
 }
 
-.sidebar-nav {
-  position: fixed;
-  width: 21.97%;
-}
+// side navigation bar
+.well {
+  padding: 0px;
 
+  &.sidebar-nav {
+    position: fixed;
+    width: 21.97%;
 
-.active{
-  color: black;
-  background-color: white;
-}
+    .nav-list li
+    {
+      &.active a {
+        color: black;
+        background-color: yellow;
 
-.projectSide li a {
-  color: white;
-  background-color: black;
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+      }
 
-  &:hover {
-    color: black;
-    background-color: white;
+      a {
+        color: white;
+        background-color: black;
+
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+      }
+    }
   }
 }
 
-// comments stuff
+// comments session
+h3 {
+  line-height: 20px;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  border-top: 1px solid #989898;
+}
+
+textarea {
+  margin-left: 0px;
+  width: 100%;
+}
+
+#comment_name, #comment_email {
+  margin-left: 10px;
+  width: 85%;
+}
+
+.btn.btn-small {
+  line-height: 5;
+}
 
 .commenter {
   padding-top: 0px;
   margin-top: 0px;
 
   font-size: 10px;
-  //font-family: prettyCursive;
-
   color: #989898;
 }
 
 .commentContent {
   margin-top: 5px;
   margin-bottom: 0px;
-
-  //font-family: prettyCursive;
 }
-
-
