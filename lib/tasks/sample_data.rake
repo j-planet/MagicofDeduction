@@ -6,7 +6,7 @@ namespace :db do
     # make projects
     p = Project.new()
     p.title = "Could you have survived the titanic?"
-    p.title_page_img = "titanic_title.PNG"
+    p.title_page_img = "titanic/titanic_title.PNG"
     p.content_partial_view_name = "titanic"
     p.save()
 
