@@ -76,5 +76,22 @@ textarea {
 
 // tables
 tbody {
-  font-size: 11px;
+  font-size: 12px;
 }
+
+table tr {
+  th:first-child {
+    background-color: #82ff84;
+  }
+
+  td:first-child {
+    background-color: #82ff84;
+  }
+
+  td:nth-child(3) {
+    font-size: 11px;
+  }
+
+
+}
+
