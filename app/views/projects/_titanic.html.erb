@@ -1,6 +1,6 @@
 <p class="firstParagraph">The Titanic shipwreck led to the death of 1502 out of 2224 passengers in 1912. One of the reasons of such loss of life was the insufficient supply of lifeboats. This project predicts what sort of people are likely to survive.</p>
 
-<h3>Data</h3>
+<h3>0. Data</h3>
 The data contains the following variables:
 <pre class="dataPre">
 survival        Survival (0 = No; 1 = Yes)
@@ -92,8 +92,17 @@ The training data looks like this:
 
 The goal is to predict <italic>survival</italic> given the rest of the variables as input. The training data consists of 892 records and 419 predictions are to be made given their respective input variables.
 
+We can see that the data isn't ideal (i.e. ready to be dumped into all major Machine Learning algorithms). For example, there are:
+<ul>
+  <li>Attributes with missing data (e.g. <i>cabin</i> as shown above). Specifically, the <i>age</i>, <i>cabin</i> and <i>embarked</i> attributes have 177 (19.9%), 687 (77%) and 2 (0.1%) pieces of missing data, respective; for a total of 866 (9.7% overall) missing slots. Now that is a lot of missing data -- it almost renders the <i>cabin</i> attribute too sparse to be useful.</li>
+  <li>The <i>name</i> and <i>ticket</i> attributes seem too versatile to be useful.</li>
+</ul>
+<h4>0.1 Visualizing the Data</h4>
+
+<h3>1. Preliminary Fitting</h3>
+Let's ignore the fact that the data isn't pretty and feature selection has yet to be done, and just first fit a model for benchmarking.
 <h3>Feature Selection</h3>
 
-<h3>Where do we go from here?</h3>
+<h3>2. Where do we go from here?</h3>
 
-<h3>Conclusions</h3>
+<h3>3. Conclusions</h3>
