@@ -1,4 +1,4 @@
-<p class="firstParagraph">The Titanic shipwreck led to the death of 1502 out of 2224 passengers in 1912. One of the reasons of such loss of life was the insufficient supply of lifeboats. This project predicts what sort of people are likely to survive.</p>
+<p class="firstParagraph">The Titanic shipwreck led to the death of 1502 out of 2224 passengers in 1912. One of the reasons of such loss of life was the insufficient supply of lifeboats. This project predicts what sort of people are likely to survive. The evaluation criteria is the percentage of correct predictions.</p>
 
 <h3>0. Data</h3>
 The data contains the following variables:
@@ -16,7 +16,7 @@ cabin           Cabin
 embarked        Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)
 </pre>
 
-The data looks like this:
+Here's a snippet of the data:
 
 <table class="table table-bordered table-hover table-condensed">
   <thead>
@@ -93,9 +93,75 @@ The data looks like this:
 We can see that the data isn't ideal (i.e. ready to be dumped into all major Machine Learning algorithms). For example, there are:
 <ul>
   <li>Attributes with missing data (e.g. <i>cabin</i> as shown above). Specifically, the <i>age</i>, <i>cabin</i> and <i>embarked</i> attributes have 177 (19.9%), 687 (77%) and 2 (0.1%) pieces of missing data, respective; for a total of 866 (9.7% overall) missing slots. Now that is a lot of missing data -- it almost renders the <i>cabin</i> attribute too sparse to be useful.</li>
-  <li>The <i>name</i> and <i>ticket</i> attributes seem too versatile to be useful.</li>
+  <li>The <i>name</i>, <i>cabin</i> and <i>ticket</i> attributes seem too versatile to be useful.</li>
 </ul>
-<h4>0.1 Visualizing the Data</h4>
+
+<h4>0.1 Data Modification</h4>
+Modify the string fields
+<ul>
+  <li>
+    Name is too important a feature to omit.
+  </li>
+</ul>
+
+<h4>0.2 Visualizing the Data</h4>
+<p>Let's first take a quick look at the original data visually. The <i>name, cabin, and ticket</i> fields are strings, making them difficult to visualize without being modified. They are ignored for this section.</p>
+<p>First rank the attributes according to their importance, measured by information gain, gain ratio, and Gini impurity (below)</p>
+<table class="table table-bordered table-hover table-condensed">
+  <thead>
+  <tr>
+    <th>Attribute</th>
+    <th>Inf. Gain</th>
+    <th>Gain Ratio</th>
+    <th>Gini</th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>sex</td>
+        <td>0.218</td>
+        <td>0.232</td>
+        <td>0.070</td>
+      </tr>
+      <tr>
+        <td>fare</td>
+        <td>0.099</td>
+        <td>0.030</td>
+        <td>0.031</td>
+      </tr>
+      <tr>
+        <td>pclass</td>
+        <td>0.084</td>
+        <td>0.058</td>
+        <td>0.027</td>
+      </tr>
+      <tr>
+        <td>sibsp</td>
+        <td>0.033</td>
+        <td>0.025</td>
+        <td>0.010</td>
+      </tr>
+      <tr>
+        <td>parch</td>
+        <td>0.024</td>
+        <td>0.021</td>
+        <td>0.007</td>
+      </tr>
+      <tr>
+        <td>embarked</td>
+        <td>0.022</td>
+        <td>0.020</td>
+        <td>0.007</td>
+      </tr>
+      <tr>
+        <td>age</td>
+        <td>0.005</td>
+        <td>0.001</td>
+        <td>0.001</td>
+      </tr>
+  </tbody>
+</table>
+<p>The results are ranked by information gain. As expected, sex is high up on the list. So is fare, which separates the rich from the poor. Surprisingly, age has the least information gain. This does not necessarily mean that age has little impact on survival (reality is quite the contrary, since children probably had priority over adults). The suspect is the correlation between age and some of the features. We'll find out in a later section.</p>
 
 <h3>1. Preliminary Fitting</h3>
 Let's ignore the fact that the data isn't pretty and feature selection has yet to be done, and just first fit a model for benchmarking.
