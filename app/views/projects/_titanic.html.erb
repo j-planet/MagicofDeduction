@@ -114,7 +114,31 @@ Some data fields need to be mangled before they can be plugged into machine lear
   </li>
 </ul>
 
-<h4>0.2 Feature Importance</h4>
+<!------------------------------------------------------------------------------------------------------------------->
+<h4>0.2 Data Visualization</h4>
+<div>The plots below demonstrate a feature's distribution as well as how it affects survival (<%= render :partial => 'projects/titanic/deadAlive' %>). In each subplot:
+  <ul>
+    <li>The (stacked) histograms represent the number of survivals and deaths. </li>
+    <li>X-axis represents a feature's values.</li>
+    <li>The left Y-axis scale represents frequencies, and the right Y-axis scale represents the probability of survival.</li>
+    <li>The middle line (or dot in some cases) represents the probability of survival. Whereas the bands represent the confidence intervals of the probability of survival.</li>
+  </ul>
+</div>
+
+<%= image_tag 'titanic/distributions.png' %>
+
+<div>We can see from the distribution plots (above) that:
+  <ul>
+    <li>Females are more likely to survive (upper-left).</li>
+    <li>The probability of survival decreases with age, especially dips for individuals in their 20s~30s. (upper-right)</li>
+    <li>The more expensive the fare, the better the chance of surviving. Similarly, upper-class passengers were more likely to survive. (middle)</li>
+    <li>Men, who were not Masters, had low probability of survival. (lower-left)</li>
+    <li>Passengers with 1 or 2 siblings were more likely to survive than others who did not.</li>
+  </ul>
+</div>
+<!------------------------------------------------------------------------------------------------------------------->
+
+<h4>0.3 Feature Importance</h4>
 <p>Since there are only 10 fields, feature selection is unnecessary. However, it is still interesting and useful to know which features are more important.</p>
 <p>First rank the attributes according to their Random Forest (100 trees) importance, linear SVM weights, Information Gain, Gain Ratio, and Gini index, sorted by Random Forest importance (shown in table below).</p>
 <table class="table table-bordered table-hover table-condensed">
@@ -212,9 +236,18 @@ Some data fields need to be mangled before they can be plugged into machine lear
   </tbody>
 </table>
 <p>Below is a plot of average feature importances with their respective standard deviations calculated from a random forest with 100 trees.</p>
-<%= image_tag 'titanic/feature importances.png' %>
+<%= image_tag 'titanic/feature_importances.png' %>
+<p>This bolsters our belief from the previous section -- <i>sex, age</i> and <i>fare</i> have the strongest relationship with survival.</p>
 
-<h4>0.3 Data Visualization</h4>
+<p>Note the <i>survey plot</i> A survey plot is a simple multi-attribute visualization technique that can help to spot correlations between any two variables especially when the data is sorted according to a particular dimension. Each horizontal splice in a plot corresponds to a particular data instance. The data on a specific attribute is shown in a single column, where the length of the line corresponds to the dimensional value. When data includes a discrete or continuous class, the slices (data instances) are colored correspondingly. Therefore, if a slice only has one color (again <%= render :partial => 'projects/titanic/deadAlive' %>) when a feature is sorted, then there's a discernible monotonic relationship between this feature and the outcome. The survey plot (below) is sorted by <i>sex, fare</i> and <i>age</i> in that order. We could see that <i>sex</i> alone is enough to predict that most females have survived (the lower slice). On the other hand, it's complicated in the case of males. After further splitting by fare and age, the monotonic relationship is somewhat stronger, since each slice of age (upside-down trapezoid) has mostly just one color. In summary, the survey plot tells us that
+  <ul>
+    <li>Since there's a strong relationship between being female and having survived, a simple and robust model should be used for females.</li>
+    <li>Since there's no strong or discernible (at least monotonic) relationship between the features and survival for males, a complex, possibly non-linear model (e.g. SVM with a non-linear kernel) should be used for males.</li>
+  </ul>
+</p>
+<%= image_tag 'titanic/survey.PNG' %>
+<!------------------------------------------------------------------------------------------------------------------->
+
 <h3>1. Preliminary Fitting</h3>
 Let's ignore the fact that the data isn't pretty and feature selection has yet to be done, and just first fit a model for benchmarking.
 <h3>Feature Selection</h3>
