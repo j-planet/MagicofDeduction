@@ -1,4 +1,5 @@
-<p class="firstParagraph">The Titanic shipwreck led to the death of 1502 out of 2224 passengers in 1912. One of the reasons of such loss of life was the insufficient supply of lifeboats. This project predicts what sort of people are likely to survive. The evaluation criteria is the percentage of correct predictions.</p>
+<p class="firstParagraph"
+   xmlns="http://www.w3.org/1999/html">The Titanic shipwreck led to the death of 1502 out of 2224 passengers in 1912. One of the reasons of such loss of life was the insufficient supply of lifeboats. This project predicts what sort of people are likely to survive. The evaluation criteria is the percentage of correct predictions.</p>
 
 <h3>0. Data</h3>
 The data contains the following variables:
@@ -97,72 +98,123 @@ We can see that the data isn't ideal (i.e. ready to be dumped into all major Mac
 </ul>
 
 <h4>0.1 Data Modification</h4>
-Modify the string fields
+Some data fields need to be mangled before they can be plugged into machine learning algorithms.
 <ul>
   <li>
-    Name is too important a feature to omit.
+    <i>Name</i> is too important to be omitted. So what useful information can we extract from it? The title -- Master, Mr, Mrs, Miss, etc. It provides important information about an individual's social status, marital status, gender and vaguely the age. It is especially helpful when <i>age</i> and <i>sex</i> fields have missing data.
+  </li>
+  <li>
+    <i>Cabin</i> comes in the format of "C85", "A6", "B78", etc. The first letter, which represents the main cabin section, is preserved; the numbers are omitted.
+  </li>
+  <li>
+    <i>Ticket</i> is difficult to work with because it consists of a wide range of letters and numbers, e.g. "STON/O2. 3101282", "17463", "PC 17601", etc. The letters are kept. The numbers are discretized by preserving the first digit and the number of digits, e.g. "17463" becomes "1_5".
+  </li>
+  <li>
+    Missing data could be filled by the average or the mode of the available data, or simply a fixed value. As we'll see in a later section, determining how missing data should be filled is in fact part of the parameters-tuning process. In addition, <i>age</i> is so important that we fill missing values with linear SVM predictions made using the other fields.
   </li>
 </ul>
 
-<h4>0.2 Visualizing the Data</h4>
-<p>Let's first take a quick look at the original data visually. The <i>name, cabin, and ticket</i> fields are strings, making them difficult to visualize without being modified. They are ignored for this section.</p>
-<p>First rank the attributes according to their importance, measured by information gain, gain ratio, and Gini impurity (below)</p>
+<h4>0.2 Feature Importance</h4>
+<p>Since there are only 10 fields, feature selection is unnecessary. However, it is still interesting and useful to know which features are more important.</p>
+<p>First rank the attributes according to their Random Forest (100 trees) importance, linear SVM weights, Information Gain, Gain Ratio, and Gini index, sorted by Random Forest importance (shown in table below).</p>
 <table class="table table-bordered table-hover table-condensed">
   <thead>
   <tr>
-    <th>Attribute</th>
-    <th>Inf. Gain</th>
-    <th>Gain Ratio</th>
-    <th>Gini</th>
+    <td>Attribute</td>
+    <td>RF</td>
+    <td>SVM</td>
+    <td>Inf. Gain</td>
+    <td>Gain Ratio</td>
+    <td>Gini</td>
   </tr>
   </thead>
   <tbody>
-      <tr>
-        <td>sex</td>
-        <td>0.218</td>
-        <td>0.232</td>
-        <td>0.070</td>
-      </tr>
-      <tr>
-        <td>fare</td>
-        <td>0.099</td>
-        <td>0.030</td>
-        <td>0.031</td>
-      </tr>
-      <tr>
-        <td>pclass</td>
-        <td>0.084</td>
-        <td>0.058</td>
-        <td>0.027</td>
-      </tr>
-      <tr>
-        <td>sibsp</td>
-        <td>0.033</td>
-        <td>0.025</td>
-        <td>0.010</td>
-      </tr>
-      <tr>
-        <td>parch</td>
-        <td>0.024</td>
-        <td>0.021</td>
-        <td>0.007</td>
-      </tr>
-      <tr>
-        <td>embarked</td>
-        <td>0.022</td>
-        <td>0.020</td>
-        <td>0.007</td>
-      </tr>
-      <tr>
-        <td>age</td>
-        <td>0.005</td>
-        <td>0.001</td>
-        <td>0.001</td>
-      </tr>
+  <tr>
+    <td>sex</td>
+    <td>0.242</td>
+    <td>1.402</td>
+    <td>0.218</td>
+    <td>0.232</td>
+    <td>0.070</td>
+  </tr>
+  <tr>
+    <td>age</td>
+    <td>0.179</td>
+    <td>0.432</td>
+    <td>0.016</td>
+    <td>0.005</td>
+    <td>0.005</td>
+  </tr>
+  <tr>
+    <td>fare</td>
+    <td>0.153</td>
+    <td>0.192</td>
+    <td>0.099</td>
+    <td>0.030</td>
+    <td>0.031</td>
+  </tr>
+  <tr>
+    <td>pclass</td>
+    <td>0.090</td>
+    <td>0.139</td>
+    <td>0.084</td>
+    <td>0.058</td>
+    <td>0.027</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>0.084</td>
+    <td>0.269</td>
+    <td>0.239</td>
+    <td>0.144</td>
+    <td>0.075</td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>0.080</td>
+    <td>0.179</td>
+    <td>0.147</td>
+    <td>0.037</td>
+    <td>0.043</td>
+  </tr>
+  <tr>
+    <td>cabin</td>
+    <td>0.064</td>
+    <td>0.032</td>
+    <td>0.022</td>
+    <td>0.009</td>
+    <td>0.007</td>
+  </tr>
+  <tr>
+    <td>sibsp</td>
+    <td>0.050</td>
+    <td>0.362</td>
+    <td>0.033</td>
+    <td>0.025</td>
+    <td>0.010</td>
+  </tr>
+  <tr>
+    <td>embarked</td>
+    <td>0.030</td>
+    <td>0.006</td>
+    <td>0.021</td>
+    <td>0.019</td>
+    <td>0.007</td>
+  </tr>
+  <tr>
+    <td>parch</td>
+    <td>0.030</td>
+    <td>0.257</td>
+    <td>0.024</td>
+    <td>0.021</td>
+    <td>0.007</td>
+  </tr>
   </tbody>
 </table>
-<p>The results are ranked by information gain. As expected, sex is high up on the list. So is fare, which separates the rich from the poor. Surprisingly, age has the least information gain. This does not necessarily mean that age has little impact on survival (reality is quite the contrary, since children probably had priority over adults). The suspect is the correlation between age and some of the features. We'll find out in a later section.</p>
+<p>Below is a plot of average feature importances with their respective standard deviations calculated from a random forest with 100 trees.</p>
+<%= image_tag 'titanic/feature importances.png' %>
 
+<h4>0.3 Data Visualization</h4>
 <h3>1. Preliminary Fitting</h3>
 Let's ignore the fact that the data isn't pretty and feature selection has yet to be done, and just first fit a model for benchmarking.
 <h3>Feature Selection</h3>
