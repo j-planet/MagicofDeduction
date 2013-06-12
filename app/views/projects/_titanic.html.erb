@@ -1,5 +1,6 @@
 <p class="firstParagraph"
    xmlns="http://www.w3.org/1999/html">The Titanic shipwreck led to the death of 1502 out of 2224 passengers in 1912. One of the reasons of such loss of life was the insufficient supply of lifeboats. This project predicts what sort of people are likely to survive. The evaluation criteria is the percentage of correct predictions.</p>
+<!------------------------------------------------------------------------------------------------------------------->
 
 <h3>0. Data</h3>
 The data contains the following variables:
@@ -239,19 +240,30 @@ Some data fields need to be mangled before they can be plugged into machine lear
 <%= image_tag 'titanic/feature_importances.png' %>
 <p>This bolsters our belief from the previous section -- <i>sex, age</i> and <i>fare</i> have the strongest relationship with survival.</p>
 
-<p>Note the <i>survey plot</i> A survey plot is a simple multi-attribute visualization technique that can help to spot correlations between any two variables especially when the data is sorted according to a particular dimension. Each horizontal splice in a plot corresponds to a particular data instance. The data on a specific attribute is shown in a single column, where the length of the line corresponds to the dimensional value. When data includes a discrete or continuous class, the slices (data instances) are colored correspondingly. Therefore, if a slice only has one color (again <%= render :partial => 'projects/titanic/deadAlive' %>) when a feature is sorted, then there's a discernible monotonic relationship between this feature and the outcome. The survey plot (below) is sorted by <i>sex, fare</i> and <i>age</i> in that order. We could see that <i>sex</i> alone is enough to predict that most females have survived (the lower slice). On the other hand, it's complicated in the case of males. After further splitting by fare and age, the monotonic relationship is somewhat stronger, since each slice of age (upside-down trapezoid) has mostly just one color. In summary, the survey plot tells us that
+<div>Note the <i>survey plot</i> A survey plot is a simple multi-attribute visualization technique that can help to spot correlations between any two variables especially when the data is sorted according to a particular dimension. Each horizontal splice in a plot corresponds to a particular data instance. The data on a specific attribute is shown in a single column, where the length of the line corresponds to the dimensional value. When data includes a discrete or continuous class, the slices (data instances) are colored correspondingly. Therefore, if a slice only has one color (again <%= render :partial => 'projects/titanic/deadAlive' %>) when a feature is sorted, then there's a discernible monotonic relationship between this feature and the outcome. The survey plot (below) is sorted by <i>sex, fare</i> and <i>age</i> in that order. We could see that <i>sex</i> alone is enough to predict that most females have survived (the lower slice). On the other hand, it's complicated in the case of males. After further splitting by fare and age, the monotonic relationship is somewhat stronger, since each slice of age (upside-down trapezoid) has mostly just one color. In summary, the survey plot tells us that:
   <ul>
     <li>Since there's a strong relationship between being female and having survived, a simple and robust model should be used for females.</li>
     <li>Since there's no strong or discernible (at least monotonic) relationship between the features and survival for males, a complex, possibly non-linear model (e.g. SVM with a non-linear kernel) should be used for males.</li>
   </ul>
-</p>
+</div>
 <%= image_tag 'titanic/survey.PNG' %>
 <!------------------------------------------------------------------------------------------------------------------->
 
-<h3>1. Preliminary Fitting</h3>
-Let's ignore the fact that the data isn't pretty and feature selection has yet to be done, and just first fit a model for benchmarking.
-<h3>Feature Selection</h3>
+<h3>1. Fitting Models</h3>
+Alright, let the fun begin!
+
+<h4>1.0 Preliminary Fitting</h4>
+<p>Let's first fit a handful of base models for benchmarking purposes. Tree-based algorithms are capable of dealing with missing data. For other algorithms, missing data is replaced with the average of that variable. In addition, all variables are normalized. (Note: in a later section we tune the process to find out which data preprocessing method is optimal.)
+</p>
+<!------------------------------------------------------------------------------------------------------------------->
+
+<h4>1.1 Ensemble Methods</h4>
+<!------------------------------------------------------------------------------------------------------------------->
+
+<h4>1.2 Tuning </h4>
+<!------------------------------------------------------------------------------------------------------------------->
 
 <h3>2. Where do we go from here?</h3>
+<!------------------------------------------------------------------------------------------------------------------->
 
 <h3>3. Conclusions</h3>
