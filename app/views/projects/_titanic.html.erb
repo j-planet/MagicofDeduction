@@ -255,8 +255,25 @@ Some data fields need to be mangled before they can be plugged into machine lear
 Alright, let the fun begin!
 
 <h4>1.0 Preliminary Fitting</h4>
+
 <p>Let's first fit a handful of base models for benchmarking purposes. Tree-based algorithms are capable of dealing with missing data. For other algorithms, missing data is replaced with the average of that variable. In addition, all variables are normalized. (Note: in a later section we tune the process to find out which data preprocessing method is optimal.)
 </p>
+
+<div>The algorithms tested are:
+  <ul>
+    <li>
+      Classification Tree:
+        <ul>
+            <li>attribute selection criteria: Inormation Gain</li>
+            <li>at least 2 instances in each leaf</li>
+            <li>Recursively merge leaves with same majority class</li>
+            <li>Prune with m-estimate, where m=2.</li>
+        </ul>
+
+    </li>
+
+  </ul>
+</div>
 <!------------------------------------------------------------------------------------------------------------------->
 
 <h4>1.1 Ensemble Methods</h4>
